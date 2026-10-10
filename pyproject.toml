@@ -1,0 +1,10 @@
+[project]
+name = "memory-poisoning-cascade"
+version = "0.1.0"
+description = "LLM-in-the-loop cross-session memory-poisoning cascade experiment harness"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+

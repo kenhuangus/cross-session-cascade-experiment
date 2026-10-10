@@ -1,0 +1,20 @@
+models:
+  claude_cli_wsl:
+    role: primary_real_llm
+    provider: claude_cli
+    command: claude
+    transport: wsl
+    decoding:
+      temperature: lowest_available
+    auth_note: subscription_login_preferred; external API key environment variables are unset by the provider
+  grok_cli:
+    role: second_real_llm
+    provider: grok_cli
+    command: grok
+    default_model: grok-composer-2.5-fast
+    decoding:
+      temperature: cli_default
+  heuristic_fake:
+    role: deterministic_test_model
+    provider: local
+    usage: unit tests, batch harness validation, and cost-free data-pipeline checks only

@@ -1,0 +1,30 @@
+.pytest_cache/
+__pycache__/
+*.pyc
+*.egg-info/
+.venv/
+dist/
+build/
+traces/
+*.log
+plan.json
+
+# Local tool and editor state, without naming a specific product.
+.cache/
+.local/
+tmp/
+*.tmp
+
+# Working and review notes. Keep the project README and docs.
+*review*.md
+*_readout.md
+*CHANGELOG_*.md
+*paper*.md
+*draft*.md
+prd.md
+*plan*.md
+notes/
+scratch/
+results/generated/
+!README.md
+!docs/**/*.md
