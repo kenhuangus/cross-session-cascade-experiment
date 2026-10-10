@@ -13,6 +13,7 @@ It includes:
 - Defense conditions C0–C10.
 - TGM (constraint-drift probes only), provenance (sensitive egress whose justification cites low-authority memory), a stateless guardrail, an independent action scorer (destination domain against an allowlist, scope versus the task, action-type risk tier), and action gating.
 - The rescored 11-condition table, with Wilson and cluster-bootstrap intervals, is `results/generated/eleven_condition_table.md`. Regenerating it (`python rigor_report.py`) does not call a model CLI.
+- Every ablation run (paraphrased poison, entity-anchored retrieval, the vendor-payment scenario, and the entity-anchored paraphrase follow-up), with the main honest run for comparison, is in `results/ablation_summary.md`. Regenerating it (`python ablation_report.py`) reads the cached summaries and traces and does not call a model CLI.
 - Metrics for incremental ASR, temporal robustness, retrieval mediation, ROC/AUC, and paired tests.
 
 Run deterministic tests:
