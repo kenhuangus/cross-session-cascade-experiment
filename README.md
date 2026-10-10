@@ -10,8 +10,9 @@ It includes:
 - A deterministic fake model for repeatable unit tests.
 - Multi-session episode execution.
 - Generated paired batch data across delay levels and poison taxonomy.
-- Defense conditions C0-C7.
-- TGM, provenance, stateless guardrail, and action-gating logic.
+- Defense conditions C0–C10.
+- TGM (constraint-drift probes only), provenance (sensitive egress whose justification cites low-authority memory), a stateless guardrail, an independent action scorer (destination domain against an allowlist, scope versus the task, action-type risk tier), and action gating.
+- The rescored 11-condition table, with Wilson and cluster-bootstrap intervals, is `results/generated/eleven_condition_table.md`. Regenerating it (`python rigor_report.py`) does not call a model CLI.
 - Metrics for incremental ASR, temporal robustness, retrieval mediation, ROC/AUC, and paired tests.
 
 Run deterministic tests:

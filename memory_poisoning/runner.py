@@ -81,7 +81,12 @@ class EpisodeRunner:
                     )
                 )
             if condition.independent_guardrail:
-                signals.extend(independent.evaluate(action=decision.proposed_action))
+                signals.extend(
+                    independent.evaluate(
+                        action=decision.proposed_action,
+                        user_utterance=session.user_utterance,
+                    )
+                )
             if condition.provenance:
                 signals.extend(
                     provenance.evaluate(

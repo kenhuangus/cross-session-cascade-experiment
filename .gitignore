@@ -25,6 +25,7 @@ prd.md
 *plan*.md
 notes/
 scratch/
-results/generated/
+results/generated/*
+!results/generated/eleven_condition_table.md
 !README.md
 !docs/**/*.md

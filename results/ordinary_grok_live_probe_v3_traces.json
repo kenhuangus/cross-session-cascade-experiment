@@ -548,7 +548,7 @@
     "detected_before_action": false,
     "poison_retrieved": false,
     "alert_lead_turns": null,
-    "final_tgm_score": 0.3333333333333333,
+    "final_tgm_score": 0.6666666666666666,
     "metadata": {
       "seed": 1,
       "delay_level": "short",

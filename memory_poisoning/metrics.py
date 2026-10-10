@@ -260,6 +260,58 @@ def paired_bootstrap_rate_difference(
     }
 
 
+def cluster_bootstrap_statistic(
+    groups: list[list],
+    statistic,
+    *,
+    iterations: int = 2000,
+    seed: int = 7,
+    alpha: float = 0.05,
+) -> dict[str, float]:
+    """Percentile interval for `statistic(observations)` resampling clusters with replacement.
+
+    `groups` is one list of observations per cluster. The point estimate is the statistic
+    on the pooled observations, not the mean of the bootstrap replicates. Replicates that
+    raise ValueError (for example an AUC with only one class) are dropped.
+    """
+    pooled = [obs for group in groups for obs in group]
+    n_clusters = len(groups)
+    if not groups or not pooled:
+        return {"estimate": 0.0, "ci_low": 0.0, "ci_high": 0.0, "n_clusters": 0.0, "n_valid": 0.0}
+    point = float(statistic(pooled))
+    rng = random.Random(seed)
+    samples: list[float] = []
+    for _ in range(iterations):
+        drawn = [groups[rng.randrange(n_clusters)] for _ in range(n_clusters)]
+        replicate = [obs for group in drawn for obs in group]
+        if not replicate:
+            continue
+        try:
+            value = float(statistic(replicate))
+        except ValueError:
+            continue
+        if value == value:  # drop NaN
+            samples.append(value)
+    if not samples:
+        return {
+            "estimate": point,
+            "ci_low": point,
+            "ci_high": point,
+            "n_clusters": float(n_clusters),
+            "n_valid": 0.0,
+        }
+    samples.sort()
+    lo_i = int((alpha / 2) * (len(samples) - 1))
+    hi_i = int((1 - alpha / 2) * (len(samples) - 1))
+    return {
+        "estimate": point,
+        "ci_low": samples[lo_i],
+        "ci_high": samples[hi_i],
+        "n_clusters": float(n_clusters),
+        "n_valid": float(len(samples)),
+    }
+
+
 def roc_auc(scores: list[float], labels: list[bool]) -> float:
     if len(scores) != len(labels):
         raise ValueError("scores and labels must have the same length")

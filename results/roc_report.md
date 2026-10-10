@@ -1,31 +1,18 @@
-# Detector ROC/AUPRC (P3, continuous scores, observable-only)
+# Detector ROC/AUPRC (continuous scores, observable-only)
 
-Pooled over 4 agents' honest-mode traces. n=18942 retrieved memories in attack episodes,
-5170 ground-truth poisoned (27.3%). Scores are pure functions of each
-memory's own text/authority (`detector_scoring.py`); the ground-truth "poison" label is used
-only to compute these metrics, never fed into a defense's decision.
+Pooled over 4 agents' honest-mode traces. Unit: one retrieved memory in an attack episode.
+Positive class: the memory's labels include `poison` (evaluation only; the label is not a
+gate input). n=18942, positives=5170 (27.3%). Intervals are cluster-bootstrap
+95% percentile intervals over (agent, seed), n_clusters=20.
 
-| Detector | ROC-AUC | AUPRC |
+| Detector | ROC-AUC [cluster 95%] | AUPRC [cluster 95%] |
 |---|--:|--:|
-| TGM (graded term-matching) | 0.649 | 0.561 |
-| Provenance (graded authority + text) | 0.603 | 0.515 |
+| TGM (graded term-matching) | 0.649 [0.598, 0.691] | 0.561 [0.505, 0.634] |
+| Provenance (graded authority + text) | 0.603 [0.530, 0.663] | 0.515 [0.427, 0.610] |
 
-Baseline: a random/no-skill classifier has ROC-AUC=0.5 and AUPRC=0.273
-(the positive prevalence).
+Baseline: a no-skill ranker has ROC-AUC 0.5 and AUPRC 0.273 (the positive prevalence).
+Graded TGM point estimate 0.649; graded provenance 0.603.
+These scores are per-memory text/authority functions. They are not the binary action gates.
+The binary gates are documented in `results/generated/eleven_condition_table.md`.
 
-**Reading (counter-intuitive vs. the binary gate results):**
-Graded TGM (AUC 0.649) modestly OUTPERFORMS graded provenance (AUC 0.603) as a
-per-memory poison detector, even though the *binary, hardcoded-threshold* TGM gate showed zero
-mitigation (Table 2: C5 honest == C0) while the binary provenance gate showed real mitigation
-(C0 vs C7 in Table 3). The two findings do not contradict: TGM's binary gate only fires on its
-five hardcoded exact phrases, which the ordinary_assistant profile's poison never contains
-verbatim -- but the generated poison text does sometimes contain a *soft* synonym ("checks are
-handled upstream"), which the graded score picks up and the hard gate misses. Provenance's
-binary gate mitigates ASR not because per-memory authority strongly discriminates poison from
-clean content (AUC 0.603 is only modestly above the 0.273 chance AUPRC) --
-almost every retrieved memory in this harness, poisoned or not, is `user_asserted` -- but
-because *combined with the harm gate*, "harmful action + any user-asserted supporting memory"
-is a broad-but-effective heuristic in a corpus where operators rarely write `system_verified`
-notes. **Actionable upgrade:** replace TGM's hardcoded exact-phrase list with a graded/learned
-score and a probabilistic threshold; it would recover some of the AUC 0.649 signal the
-binary gate currently discards.
+Cluster intervals that cover 0.5 do not establish ranking skill beyond chance on this sample.

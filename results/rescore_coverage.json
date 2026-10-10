@@ -1,0 +1,644 @@
+[
+  {
+    "file": "results/claude_live_short_traces.json",
+    "episodes": 32,
+    "conditions": [
+      "C0_no_defense",
+      "C1_strong_stateless_guardrail",
+      "C2_provenance_monitor",
+      "C3_provenance_plus_gating",
+      "C4_tgm_monitor",
+      "C5_tgm_plus_gating",
+      "C6_tgm_plus_provenance_monitor",
+      "C7_tgm_plus_provenance_plus_gating"
+    ],
+    "oracle_labels": false,
+    "poison_turns_aligned": 32,
+    "missing_c8_c10": [
+      "C8_all_layers",
+      "C9_independent_guardrail",
+      "C10_independent_plus_tgm_provenance"
+    ]
+  },
+  {
+    "file": "results/grok_live_short_traces.json",
+    "episodes": 32,
+    "conditions": [
+      "C0_no_defense",
+      "C1_strong_stateless_guardrail",
+      "C2_provenance_monitor",
+      "C3_provenance_plus_gating",
+      "C4_tgm_monitor",
+      "C5_tgm_plus_gating",
+      "C6_tgm_plus_provenance_monitor",
+      "C7_tgm_plus_provenance_plus_gating"
+    ],
+    "oracle_labels": false,
+    "poison_turns_aligned": 32,
+    "missing_c8_c10": [
+      "C8_all_layers",
+      "C9_independent_guardrail",
+      "C10_independent_plus_tgm_provenance"
+    ]
+  },
+  {
+    "file": "results/ordinary_claude_5seed_traces.json",
+    "episodes": 300,
+    "conditions": [
+      "C0_no_defense",
+      "C1_strong_stateless_guardrail",
+      "C5_tgm_plus_gating",
+      "C7_tgm_plus_provenance_plus_gating",
+      "C8_all_layers"
+    ],
+    "oracle_labels": false,
+    "poison_turns_aligned": 300,
+    "missing_c8_c10": [
+      "C9_independent_guardrail",
+      "C10_independent_plus_tgm_provenance"
+    ]
+  },
+  {
+    "file": "results/ordinary_claude_live_pilot_traces.json",
+    "episodes": 16,
+    "conditions": [
+      "C0_no_defense",
+      "C1_strong_stateless_guardrail",
+      "C5_tgm_plus_gating",
+      "C7_tgm_plus_provenance_plus_gating"
+    ],
+    "oracle_labels": false,
+    "poison_turns_aligned": 16,
+    "missing_c8_c10": [
+      "C8_all_layers",
+      "C9_independent_guardrail",
+      "C10_independent_plus_tgm_provenance"
+    ]
+  },
+  {
+    "file": "results/ordinary_claude_live_probe_traces.json",
+    "episodes": 4,
+    "conditions": [
+      "C0_no_defense",
+      "C7_tgm_plus_provenance_plus_gating"
+    ],
+    "oracle_labels": false,
+    "poison_turns_aligned": 4,
+    "missing_c8_c10": [
+      "C8_all_layers",
+      "C9_independent_guardrail",
+      "C10_independent_plus_tgm_provenance"
+    ]
+  },
+  {
+    "file": "results/ordinary_codex_5seed_traces.json",
+    "episodes": 300,
+    "conditions": [
+      "C0_no_defense",
+      "C1_strong_stateless_guardrail",
+      "C5_tgm_plus_gating",
+      "C7_tgm_plus_provenance_plus_gating",
+      "C8_all_layers"
+    ],
+    "oracle_labels": false,
+    "poison_turns_aligned": 300,
+    "missing_c8_c10": [
+      "C9_independent_guardrail",
+      "C10_independent_plus_tgm_provenance"
+    ]
+  },
+  {
+    "file": "results/ordinary_codex_followup_traces.json",
+    "episodes": 48,
+    "conditions": [
+      "C0_no_defense",
+      "C1_strong_stateless_guardrail",
+      "C5_tgm_plus_gating",
+      "C7_tgm_plus_provenance_plus_gating"
+    ],
+    "oracle_labels": false,
+    "poison_turns_aligned": 48,
+    "missing_c8_c10": [
+      "C8_all_layers",
+      "C9_independent_guardrail",
+      "C10_independent_plus_tgm_provenance"
+    ]
+  },
+  {
+    "file": "results/ordinary_codex_smoke_traces.json",
+    "episodes": 4,
+    "conditions": [
+      "C0_no_defense",
+      "C7_tgm_plus_provenance_plus_gating"
+    ],
+    "oracle_labels": false,
+    "poison_turns_aligned": 4,
+    "missing_c8_c10": [
+      "C8_all_layers",
+      "C9_independent_guardrail",
+      "C10_independent_plus_tgm_provenance"
+    ]
+  },
+  {
+    "file": "results/ordinary_cursor_5seed_traces.json",
+    "episodes": 300,
+    "conditions": [
+      "C0_no_defense",
+      "C1_strong_stateless_guardrail",
+      "C5_tgm_plus_gating",
+      "C7_tgm_plus_provenance_plus_gating",
+      "C8_all_layers"
+    ],
+    "oracle_labels": false,
+    "poison_turns_aligned": 300,
+    "missing_c8_c10": [
+      "C9_independent_guardrail",
+      "C10_independent_plus_tgm_provenance"
+    ]
+  },
+  {
+    "file": "results/ordinary_cursor_followup_traces.json",
+    "episodes": 48,
+    "conditions": [
+      "C0_no_defense",
+      "C1_strong_stateless_guardrail",
+      "C5_tgm_plus_gating",
+      "C7_tgm_plus_provenance_plus_gating"
+    ],
+    "oracle_labels": false,
+    "poison_turns_aligned": 48,
+    "missing_c8_c10": [
+      "C8_all_layers",
+      "C9_independent_guardrail",
+      "C10_independent_plus_tgm_provenance"
+    ]
+  },
+  {
+    "file": "results/ordinary_cursor_smoke_traces.json",
+    "episodes": 4,
+    "conditions": [
+      "C0_no_defense",
+      "C7_tgm_plus_provenance_plus_gating"
+    ],
+    "oracle_labels": false,
+    "poison_turns_aligned": 4,
+    "missing_c8_c10": [
+      "C8_all_layers",
+      "C9_independent_guardrail",
+      "C10_independent_plus_tgm_provenance"
+    ]
+  },
+  {
+    "file": "results/ordinary_deterministic_sanity_traces.json",
+    "episodes": 8,
+    "conditions": [
+      "C0_no_defense",
+      "C7_tgm_plus_provenance_plus_gating"
+    ],
+    "oracle_labels": false,
+    "poison_turns_aligned": 8,
+    "missing_c8_c10": [
+      "C8_all_layers",
+      "C9_independent_guardrail",
+      "C10_independent_plus_tgm_provenance"
+    ]
+  },
+  {
+    "file": "results/ordinary_grok_5seed_traces.json",
+    "episodes": 300,
+    "conditions": [
+      "C0_no_defense",
+      "C1_strong_stateless_guardrail",
+      "C5_tgm_plus_gating",
+      "C7_tgm_plus_provenance_plus_gating",
+      "C8_all_layers"
+    ],
+    "oracle_labels": false,
+    "poison_turns_aligned": 300,
+    "missing_c8_c10": [
+      "C9_independent_guardrail",
+      "C10_independent_plus_tgm_provenance"
+    ]
+  },
+  {
+    "file": "results/ordinary_grok_followup_traces.json",
+    "episodes": 48,
+    "conditions": [
+      "C0_no_defense",
+      "C1_strong_stateless_guardrail",
+      "C5_tgm_plus_gating",
+      "C7_tgm_plus_provenance_plus_gating"
+    ],
+    "oracle_labels": false,
+    "poison_turns_aligned": 48,
+    "missing_c8_c10": [
+      "C8_all_layers",
+      "C9_independent_guardrail",
+      "C10_independent_plus_tgm_provenance"
+    ]
+  },
+  {
+    "file": "results/ordinary_grok_live_probe_v3_traces.json",
+    "episodes": 4,
+    "conditions": [
+      "C0_no_defense",
+      "C7_tgm_plus_provenance_plus_gating"
+    ],
+    "oracle_labels": false,
+    "poison_turns_aligned": 4,
+    "missing_c8_c10": [
+      "C8_all_layers",
+      "C9_independent_guardrail",
+      "C10_independent_plus_tgm_provenance"
+    ]
+  },
+  {
+    "file": "results/rigor/ablation_adaptive2_claude_traces.json",
+    "episodes": 16,
+    "conditions": [
+      "C0_no_defense",
+      "C10_independent_plus_tgm_provenance",
+      "C7_tgm_plus_provenance_plus_gating",
+      "C9_independent_guardrail"
+    ],
+    "oracle_labels": false,
+    "poison_turns_aligned": 16,
+    "missing_c8_c10": [
+      "C8_all_layers"
+    ]
+  },
+  {
+    "file": "results/rigor/ablation_adaptive2_codex_traces.json",
+    "episodes": 16,
+    "conditions": [
+      "C0_no_defense",
+      "C10_independent_plus_tgm_provenance",
+      "C7_tgm_plus_provenance_plus_gating",
+      "C9_independent_guardrail"
+    ],
+    "oracle_labels": false,
+    "poison_turns_aligned": 16,
+    "missing_c8_c10": [
+      "C8_all_layers"
+    ]
+  },
+  {
+    "file": "results/rigor/ablation_adaptive2_cursor_traces.json",
+    "episodes": 16,
+    "conditions": [
+      "C0_no_defense",
+      "C10_independent_plus_tgm_provenance",
+      "C7_tgm_plus_provenance_plus_gating",
+      "C9_independent_guardrail"
+    ],
+    "oracle_labels": false,
+    "poison_turns_aligned": 16,
+    "missing_c8_c10": [
+      "C8_all_layers"
+    ]
+  },
+  {
+    "file": "results/rigor/ablation_adaptive2_grok_traces.json",
+    "episodes": 16,
+    "conditions": [
+      "C0_no_defense",
+      "C10_independent_plus_tgm_provenance",
+      "C7_tgm_plus_provenance_plus_gating",
+      "C9_independent_guardrail"
+    ],
+    "oracle_labels": false,
+    "poison_turns_aligned": 16,
+    "missing_c8_c10": [
+      "C8_all_layers"
+    ]
+  },
+  {
+    "file": "results/rigor/ablation_adaptive_claude_traces.json",
+    "episodes": 20,
+    "conditions": [
+      "C0_no_defense",
+      "C10_independent_plus_tgm_provenance",
+      "C5_tgm_plus_gating",
+      "C7_tgm_plus_provenance_plus_gating",
+      "C9_independent_guardrail"
+    ],
+    "oracle_labels": false,
+    "poison_turns_aligned": 20,
+    "missing_c8_c10": [
+      "C8_all_layers"
+    ]
+  },
+  {
+    "file": "results/rigor/ablation_adaptive_codex_traces.json",
+    "episodes": 20,
+    "conditions": [
+      "C0_no_defense",
+      "C10_independent_plus_tgm_provenance",
+      "C5_tgm_plus_gating",
+      "C7_tgm_plus_provenance_plus_gating",
+      "C9_independent_guardrail"
+    ],
+    "oracle_labels": false,
+    "poison_turns_aligned": 20,
+    "missing_c8_c10": [
+      "C8_all_layers"
+    ]
+  },
+  {
+    "file": "results/rigor/ablation_adaptive_cursor_traces.json",
+    "episodes": 20,
+    "conditions": [
+      "C0_no_defense",
+      "C10_independent_plus_tgm_provenance",
+      "C5_tgm_plus_gating",
+      "C7_tgm_plus_provenance_plus_gating",
+      "C9_independent_guardrail"
+    ],
+    "oracle_labels": false,
+    "poison_turns_aligned": 20,
+    "missing_c8_c10": [
+      "C8_all_layers"
+    ]
+  },
+  {
+    "file": "results/rigor/ablation_adaptive_grok_traces.json",
+    "episodes": 20,
+    "conditions": [
+      "C0_no_defense",
+      "C10_independent_plus_tgm_provenance",
+      "C5_tgm_plus_gating",
+      "C7_tgm_plus_provenance_plus_gating",
+      "C9_independent_guardrail"
+    ],
+    "oracle_labels": false,
+    "poison_turns_aligned": 20,
+    "missing_c8_c10": [
+      "C8_all_layers"
+    ]
+  },
+  {
+    "file": "results/rigor/ablation_retrieval_claude_traces.json",
+    "episodes": 16,
+    "conditions": [
+      "C0_no_defense",
+      "C10_independent_plus_tgm_provenance",
+      "C7_tgm_plus_provenance_plus_gating",
+      "C9_independent_guardrail"
+    ],
+    "oracle_labels": false,
+    "poison_turns_aligned": 16,
+    "missing_c8_c10": [
+      "C8_all_layers"
+    ]
+  },
+  {
+    "file": "results/rigor/ablation_retrieval_codex_traces.json",
+    "episodes": 16,
+    "conditions": [
+      "C0_no_defense",
+      "C10_independent_plus_tgm_provenance",
+      "C7_tgm_plus_provenance_plus_gating",
+      "C9_independent_guardrail"
+    ],
+    "oracle_labels": false,
+    "poison_turns_aligned": 16,
+    "missing_c8_c10": [
+      "C8_all_layers"
+    ]
+  },
+  {
+    "file": "results/rigor/ablation_retrieval_cursor_traces.json",
+    "episodes": 16,
+    "conditions": [
+      "C0_no_defense",
+      "C10_independent_plus_tgm_provenance",
+      "C7_tgm_plus_provenance_plus_gating",
+      "C9_independent_guardrail"
+    ],
+    "oracle_labels": false,
+    "poison_turns_aligned": 16,
+    "missing_c8_c10": [
+      "C8_all_layers"
+    ]
+  },
+  {
+    "file": "results/rigor/ablation_retrieval_grok_traces.json",
+    "episodes": 16,
+    "conditions": [
+      "C0_no_defense",
+      "C10_independent_plus_tgm_provenance",
+      "C7_tgm_plus_provenance_plus_gating",
+      "C9_independent_guardrail"
+    ],
+    "oracle_labels": false,
+    "poison_turns_aligned": 16,
+    "missing_c8_c10": [
+      "C8_all_layers"
+    ]
+  },
+  {
+    "file": "results/rigor/ablation_scenario_claude_traces.json",
+    "episodes": 16,
+    "conditions": [
+      "C0_no_defense",
+      "C10_independent_plus_tgm_provenance",
+      "C7_tgm_plus_provenance_plus_gating",
+      "C9_independent_guardrail"
+    ],
+    "oracle_labels": false,
+    "poison_turns_aligned": 16,
+    "missing_c8_c10": [
+      "C8_all_layers"
+    ]
+  },
+  {
+    "file": "results/rigor/ablation_scenario_codex_traces.json",
+    "episodes": 16,
+    "conditions": [
+      "C0_no_defense",
+      "C10_independent_plus_tgm_provenance",
+      "C7_tgm_plus_provenance_plus_gating",
+      "C9_independent_guardrail"
+    ],
+    "oracle_labels": false,
+    "poison_turns_aligned": 16,
+    "missing_c8_c10": [
+      "C8_all_layers"
+    ]
+  },
+  {
+    "file": "results/rigor/ablation_scenario_grok_traces.json",
+    "episodes": 16,
+    "conditions": [
+      "C0_no_defense",
+      "C10_independent_plus_tgm_provenance",
+      "C7_tgm_plus_provenance_plus_gating",
+      "C9_independent_guardrail"
+    ],
+    "oracle_labels": false,
+    "poison_turns_aligned": 16,
+    "missing_c8_c10": [
+      "C8_all_layers"
+    ]
+  },
+  {
+    "file": "results/rigor/ordinary_claude_honest_traces.json",
+    "episodes": 660,
+    "conditions": [
+      "C0_no_defense",
+      "C10_independent_plus_tgm_provenance",
+      "C1_strong_stateless_guardrail",
+      "C2_provenance_monitor",
+      "C3_provenance_plus_gating",
+      "C4_tgm_monitor",
+      "C5_tgm_plus_gating",
+      "C6_tgm_plus_provenance_monitor",
+      "C7_tgm_plus_provenance_plus_gating",
+      "C8_all_layers",
+      "C9_independent_guardrail"
+    ],
+    "oracle_labels": false,
+    "poison_turns_aligned": 660,
+    "missing_c8_c10": []
+  },
+  {
+    "file": "results/rigor/ordinary_claude_oracle_traces.json",
+    "episodes": 660,
+    "conditions": [
+      "C0_no_defense",
+      "C10_independent_plus_tgm_provenance",
+      "C1_strong_stateless_guardrail",
+      "C2_provenance_monitor",
+      "C3_provenance_plus_gating",
+      "C4_tgm_monitor",
+      "C5_tgm_plus_gating",
+      "C6_tgm_plus_provenance_monitor",
+      "C7_tgm_plus_provenance_plus_gating",
+      "C8_all_layers",
+      "C9_independent_guardrail"
+    ],
+    "oracle_labels": true,
+    "poison_turns_aligned": 660,
+    "missing_c8_c10": []
+  },
+  {
+    "file": "results/rigor/ordinary_codex_honest_traces.json",
+    "episodes": 660,
+    "conditions": [
+      "C0_no_defense",
+      "C10_independent_plus_tgm_provenance",
+      "C1_strong_stateless_guardrail",
+      "C2_provenance_monitor",
+      "C3_provenance_plus_gating",
+      "C4_tgm_monitor",
+      "C5_tgm_plus_gating",
+      "C6_tgm_plus_provenance_monitor",
+      "C7_tgm_plus_provenance_plus_gating",
+      "C8_all_layers",
+      "C9_independent_guardrail"
+    ],
+    "oracle_labels": false,
+    "poison_turns_aligned": 660,
+    "missing_c8_c10": []
+  },
+  {
+    "file": "results/rigor/ordinary_codex_oracle_traces.json",
+    "episodes": 660,
+    "conditions": [
+      "C0_no_defense",
+      "C10_independent_plus_tgm_provenance",
+      "C1_strong_stateless_guardrail",
+      "C2_provenance_monitor",
+      "C3_provenance_plus_gating",
+      "C4_tgm_monitor",
+      "C5_tgm_plus_gating",
+      "C6_tgm_plus_provenance_monitor",
+      "C7_tgm_plus_provenance_plus_gating",
+      "C8_all_layers",
+      "C9_independent_guardrail"
+    ],
+    "oracle_labels": true,
+    "poison_turns_aligned": 660,
+    "missing_c8_c10": []
+  },
+  {
+    "file": "results/rigor/ordinary_cursor_honest_traces.json",
+    "episodes": 660,
+    "conditions": [
+      "C0_no_defense",
+      "C10_independent_plus_tgm_provenance",
+      "C1_strong_stateless_guardrail",
+      "C2_provenance_monitor",
+      "C3_provenance_plus_gating",
+      "C4_tgm_monitor",
+      "C5_tgm_plus_gating",
+      "C6_tgm_plus_provenance_monitor",
+      "C7_tgm_plus_provenance_plus_gating",
+      "C8_all_layers",
+      "C9_independent_guardrail"
+    ],
+    "oracle_labels": false,
+    "poison_turns_aligned": 660,
+    "missing_c8_c10": []
+  },
+  {
+    "file": "results/rigor/ordinary_cursor_oracle_traces.json",
+    "episodes": 660,
+    "conditions": [
+      "C0_no_defense",
+      "C10_independent_plus_tgm_provenance",
+      "C1_strong_stateless_guardrail",
+      "C2_provenance_monitor",
+      "C3_provenance_plus_gating",
+      "C4_tgm_monitor",
+      "C5_tgm_plus_gating",
+      "C6_tgm_plus_provenance_monitor",
+      "C7_tgm_plus_provenance_plus_gating",
+      "C8_all_layers",
+      "C9_independent_guardrail"
+    ],
+    "oracle_labels": true,
+    "poison_turns_aligned": 660,
+    "missing_c8_c10": []
+  },
+  {
+    "file": "results/rigor/ordinary_grok_honest_traces.json",
+    "episodes": 660,
+    "conditions": [
+      "C0_no_defense",
+      "C10_independent_plus_tgm_provenance",
+      "C1_strong_stateless_guardrail",
+      "C2_provenance_monitor",
+      "C3_provenance_plus_gating",
+      "C4_tgm_monitor",
+      "C5_tgm_plus_gating",
+      "C6_tgm_plus_provenance_monitor",
+      "C7_tgm_plus_provenance_plus_gating",
+      "C8_all_layers",
+      "C9_independent_guardrail"
+    ],
+    "oracle_labels": false,
+    "poison_turns_aligned": 660,
+    "missing_c8_c10": []
+  },
+  {
+    "file": "results/rigor/ordinary_grok_oracle_traces.json",
+    "episodes": 660,
+    "conditions": [
+      "C0_no_defense",
+      "C10_independent_plus_tgm_provenance",
+      "C1_strong_stateless_guardrail",
+      "C2_provenance_monitor",
+      "C3_provenance_plus_gating",
+      "C4_tgm_monitor",
+      "C5_tgm_plus_gating",
+      "C6_tgm_plus_provenance_monitor",
+      "C7_tgm_plus_provenance_plus_gating",
+      "C8_all_layers",
+      "C9_independent_guardrail"
+    ],
+    "oracle_labels": true,
+    "poison_turns_aligned": 660,
+    "missing_c8_c10": []
+  }
+]
